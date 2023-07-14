@@ -1,0 +1,342 @@
+body {
+    font-family: 'Epilogue', sans-serif;
+    height: 100vh;
+}
+
+#overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 40%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1; 
+    display: none;
+  }
+
+p {
+    font-size: 1.3vw;
+}
+
+a {
+    text-decoration: none;
+    color: hsl(0, 0%, 8%);
+}
+
+
+
+header {
+    height: 2px;
+    margin: 3%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+
+    .btn_hmg{
+        background-color: transparent;
+        border: 0px solid;
+    }
+
+    #logo_nav {
+        display: flex;
+        width: 30%;
+    }
+
+    #login_register {
+        display: flex;
+        width: auto;
+        align-items: center;
+
+        #login {
+            width: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 50px;
+            font-size: 15px;
+            padding: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            background-color: transparent;
+            border-radius: 10px;
+            cursor: pointer;
+            border: solid 1px;
+        }
+
+        #login:hover{
+            border: solid 2px;
+            font-weight: bold;
+        }
+    }
+
+
+    #header_device{
+        display: none;
+    }
+
+    #hamburguer_content_device{
+        display: flex;
+        width: 100%;
+        z-index: 2;
+    }
+
+}
+
+.nav_links:hover{
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+
+    .nav_links {
+        margin-left: 5%;
+        width: 50px;
+    }
+
+
+}
+
+
+main {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4%;
+    width: 75%;
+
+    #main_container{
+        display: flex;
+        width: 100%;
+    }
+
+    #main_text_container {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        justify-content: space-between;
+
+        #title_main_container {
+            font-size: 4vw;
+            margin-bottom: 3%;
+        }
+
+        #body_main_container {
+            line-height: 2.5vw;
+            margin-bottom: 15%;
+            color: hsl(0, 0%, 41%);
+            width: auto;
+            white-space: nowrap;
+        }
+
+
+        #btn_main_container {
+            width: 30%;
+            height: 50px;
+            border-radius: 10px;
+            background-color: hsl(0, 0%, 8%);
+            color: white;
+            border: solid 0px;
+            cursor: pointer;
+            font-weight: 600;
+            margin-bottom: 15%;
+            font-size: 1.3vw;
+        }
+
+        #btn_main_container:hover{
+            background-color: transparent;
+            color: black;
+            border: solid 1px;
+            transition: 0.3s ease;
+        }
+
+        #btn_main_container:not(hover){
+            transition: 0.3s ease;
+
+        }
+
+        #box_icons {
+            display: flex;
+            align-items: center;
+            width: 100%;
+
+
+            .icons {
+                padding-right: 8%;
+                width: 20%;
+            }
+        }
+    }
+}
+
+
+
+
+aside {
+    display: flex;
+    width: 50%;
+    max-width: 100%;
+    justify-content: flex-end;
+    height: auto;
+ 
+
+    #hero {
+        width: 80%;
+        
+    }
+}
+
+
+@media(max-width:800px){
+
+
+
+
+    header{
+        position: fixed;
+        width: 100%;
+        height: fit-content;
+        margin: 0;
+        top: 0;
+        left: 0;
+        background-color: white;
+
+        #logo_nav{
+            width: 100%;
+        }
+
+        #menu_position_device{
+            display: flex;
+            padding: 3%;
+            width: 100%;
+            justify-content: space-between;
+        }
+
+
+        #overlay{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); 
+            z-index: 5; 
+            display: none;
+          }
+
+        #hamburguer_content_device{
+            padding: 10px;
+            flex-direction: column;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 58%;
+            height: 100%;
+            background: rgb(255, 255, 255);
+            transition: left 0.3s ease;
+            text-align: center;
+            z-index: 10;
+
+
+
+        }
+
+
+
+        #login_register{
+            flex-direction: column;
+            padding-top: 20%;
+
+
+            #login{
+                margin: 0;
+                width: 75%;
+            }
+
+            .nav_links{
+                margin-bottom: 5%;
+            }
+        }
+
+        #hmg_close{
+            width: 20%;
+            margin-left: auto;
+        }
+    }
+
+
+    nav{
+        flex-direction: column;
+        align-items: normal;
+        
+
+        .nav_links{
+            margin-top: 10%;
+            color: hsl(0, 0%, 41%);
+        }
+    }
+
+
+    main{
+
+        margin-top: 15%;
+        width: 100%;
+    }
+
+    #main_container{
+        flex-direction: column-reverse;    
+        width: 100%;
+
+        #main_text_container{
+            width: 100%;
+            align-items: center;
+
+            #title_main_container{
+                text-align: center;
+                font-size: 9vw;
+            }
+
+            #body_main_container{
+                font-size: 3.5vw;
+                margin: 4%;
+                line-height: 2.5vh;
+                text-align: center;
+            }
+
+            #btn_main_container{
+                width: 30%;
+                height: 35px;
+                font-size: 3.5vw;
+                margin-top: 4%;
+            }
+
+            #box_icons{
+                margin-top: auto;
+                width: 100%;
+                margin-left: 4%;
+
+
+
+                .icons{
+                    padding-right: 5%;
+                }
+            }
+        }
+
+    }
+
+
+
+    aside{
+        width: 100%;
+
+        #hero{
+            width: 100%;
+        }
+    }
+}
