@@ -7,6 +7,8 @@ var menu_position = document.getElementById("menu_position");
 var hamburguer_content_device = document.getElementById("hamburguer_content_device");
 var overlay = document.getElementById("overlay");
 
+var hide_menu = document.getElementById("hide_menu");
+
 window.addEventListener('load', responsive);
 window.addEventListener('resize', responsive);
 
@@ -44,6 +46,4 @@ function btn_hamburguer_close(){
 }
 
 
-function n_sei(){
-    
-}
+
